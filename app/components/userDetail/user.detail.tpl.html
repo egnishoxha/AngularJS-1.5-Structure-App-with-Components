@@ -1,0 +1,29 @@
+<div ng-bind="ctrl.user.login" class="col-md-12"></div>
+<div ng-if="ctrl.user" class="col-md-12">
+    <div><img ng-src={{ctrl.user.avatar_url}} width="200" height="200"></div>    
+    <div>Name: {{ctrl.user.login}}</div>
+    <div>Company: {{ctrl.user.company}}</div>
+    <div>Email: {{ctrl.user.email}}</div>
+    <div>Following: {{ctrl.user.following}}</div>
+    <div>Followers: {{ctrl.user.followers}}</div>
+</div>
+
+<!-- <div>
+    <form class="calc" >
+        <p class="calc-display">
+            <input type="text" name="output" id="res" value="{{output}}" class="calc-display-input">
+        </p>
+        <p class="operators">
+            <button type="button" class="calc-button calc-button-red calc-button-big" ng-click='operate("/")' >÷</button>
+            <button type="button" class="calc-button calc-button-red calc-button-big" ng-click='operate("*")' >x</button>
+            <button type="button" class="calc-button calc-button-red calc-button-big" ng-click='operate("-")' >-</button>
+            <button type="button" class="calc-button calc-button-red calc-button-big" ng-click='operate("+")' >+</button>
+        </p>
+        <p class="calc-row">
+            <button type="button" class="calc-button" ng-click="updateOutput($index)" ng-repeat="n in [0,1,2,3,4,5,6,7,8,9]">{{n}}</button>
+            <button type="button" class="calc-button" ng-click="updateOutput('.')">.</button>
+            <button type="button" class="calc-button" ng-click='output = 0'>C</button>
+        </p>
+        <p class="calc-row"><button type="button" class="calc-button calc-button-yellow calc-button-big" ng-click="equal()">=</button></p>
+    </form>
+</div> -->

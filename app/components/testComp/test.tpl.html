@@ -1,0 +1,22 @@
+<p>Test Comp</p>
+<h1>Mon prenom est: {{ctrl.prenom}} (bindings)</h1>
+<div>
+    <button ng-click="ctrl.emitData()">Emit from Test to Projects</button>
+</div>
+<div>
+    <span>from bindings</span>
+    <ul>
+        <li ng-repeat="person in ctrl.infopersonale">
+            {{person.name}}
+        </li>
+    </ul>
+</div>
+
+<div>
+    <span>from broadcast</span>
+    <ul>
+        <li ng-repeat="nom in ctrl.receivedData.names">
+            {{nom.name}}
+        </li>
+    </ul>
+</div>

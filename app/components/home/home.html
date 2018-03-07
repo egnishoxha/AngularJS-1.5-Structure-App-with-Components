@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="col-md-6">
+        <h1>Authors</h1>
+        <ul id="authors"></ul>        
+    </div>
+    <div class="col-md-6">
+        <my-livre blist="ctrl.books" btitle="Mes livres"></my-livre>
+        <my-todo list="ctrl.todo" title="Angular To-do"></my-todo>
+    </div>
+    
+    <div class="col-md-12">
+        <input type="text" ng-model="ctrl.searchValue"/>
+        <button ng-click="ctrl.searchUser()">Search</button>
+        <div>
+            <ul>
+                <li><a ui-sref=".list">List</a></li>
+            </ul>
+        </div>        
+        <ul ng-if="ctrl.users.items">
+            <p>totalCount: {{ctrl.users.total_count}}</p>
+            <li ng-repeat="user in ctrl.users.items | limitTo: 10">
+                <a ui-sref="userS({ userId: user.login })">{{user.login}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<ui-view></ui-view>
+

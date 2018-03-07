@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-12">
+        <ul>
+            <li ng-repeat="book in ctrl.loadedBooks">
+                <span>{{book.title}}</span>
+            </li>
+        </ul>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Page No</th>
+                    <th>Copies</th>
+                    <th>Actions</th>
+                    <th>
+                        <button ng-click="ctrl.addBook()">Add</button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="book in ctrl.loadedBooks">
+                    <td>{{book.title}}</td>
+                    <td>{{book.page_no}}</td>
+                    <td>{{book.copies_no}}</td>
+                    <td>
+                        <button ng-click="ctrl.editBook(book)">Edit</button>
+                        <button ng-click="ctrl.delBook(book.id)">Delete</button>
+                        <button ng-click="ctrl.detailBook(book.id)">Detail</button>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
